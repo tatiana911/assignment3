@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">MY DAILY PLANNER</p>
+      <h1>To-Do List</h1>
+      <p class="intro">Keep track of what matters today.</p>
+    </header>
+
+    <form id="task-form">
+      <label for="task-input">New task</label>
+      <div class="form-row">
+        <input id="task-input" type="text" placeholder="What do you need to do?" autocomplete="off">
+        <button type="submit">Add task</button>
+      </div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+    </form>
+
+    <section aria-label="Your tasks">
+      <div class="list-heading">
+        <h2>Your tasks</h2>
+        <span id="task-count">0 tasks</span>
+      </div>
+      <p id="empty-message" class="empty">No tasks yet. Add one above to get started.</p>
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+</body>
+</html>

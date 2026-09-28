@@ -1,0 +1,69 @@
+:root {
+  --ink: #243047;
+  --muted: #69768b;
+  --blue: #345bca;
+  --line: #e3e8f2;
+  --background: #f2f5fb;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 60px 18px;
+  background: var(--background);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 36px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(39, 57, 95, 0.08);
+}
+.eyebrow { color: var(--blue); font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+h1 { margin: 8px 0; font-size: 38px; }
+.intro { margin: 0 0 32px; color: var(--muted); }
+label { display: block; margin-bottom: 10px; font-weight: bold; }
+.form-row { display: flex; gap: 10px; }
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #cdd5e3;
+  border-radius: 9px;
+  font: inherit;
+}
+input:focus { outline: 2px solid #aac0ff; border-color: var(--blue); }
+button { font: inherit; cursor: pointer; }
+.form-row button {
+  border: 0;
+  border-radius: 9px;
+  padding: 13px 18px;
+  background: var(--blue);
+  color: white;
+  font-weight: bold;
+}
+.form-row button:hover { background: #294aa9; }
+.feedback { min-height: 22px; margin: 8px 0 22px; color: #bd3535; font-size: 14px; }
+.list-heading { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
+h2 { font-size: 19px; }
+#task-count { color: var(--muted); font-size: 14px; }
+.empty { padding: 26px 0; color: var(--muted); text-align: center; }
+#task-list { list-style: none; padding: 0; margin: 10px 0 0; }
+.task { display: flex; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.task-title { flex: 1; overflow-wrap: anywhere; }
+.task.done .task-title { text-decoration: line-through; color: var(--muted); }
+.toggle, .delete { border: 1px solid var(--line); background: white; border-radius: 7px; padding: 7px 10px; }
+.toggle { color: var(--blue); }
+.delete { color: #b12d36; }
+.toggle:hover, .delete:hover { background: var(--background); }
+@media (max-width: 480px) {
+  body { padding: 20px 12px; }
+  .app { padding: 22px; }
+  .form-row { flex-direction: column; }
+  h1 { font-size: 32px; }
+}
